@@ -1,0 +1,623 @@
+{
+  "version": 2,
+  "scale": {
+    "min": 0,
+    "max": 100,
+    "thresholds": { "low": [0, 33], "medium": [34, 66], "high": [67, 100] }
+  },
+  "sliders": [
+    {
+      "id": "confidence",
+      "label": "Confidence",
+      "description": "How assertive and decisive the copy should sound.",
+      "min": 0,
+      "max": 100,
+      "default": 90,
+      "low_label": "Cautious",
+      "high_label": "Bold",
+      "effect_on_copy": "Higher values produce decisive, assertive language without invented facts.",
+      "directives": {
+        "low": "Soften assertions with honest qualifiers (\"designed to\", \"helps\"); invite rather than command.",
+        "medium": "State benefits plainly and directly; use qualifiers only where the proof is thin.",
+        "high": "Lead with decisive, declarative statements; no hedging words (might, perhaps, we think)."
+      }
+    },
+    {
+      "id": "hype",
+      "label": "Hype",
+      "description": "How promotional and high-impact the copy should be.",
+      "min": 0,
+      "max": 100,
+      "default": 90,
+      "low_label": "Understated",
+      "high_label": "High-impact promotional",
+      "effect_on_copy": "Higher values make the copy more promotional and superlative-heavy. At 80–100 it writes bold claims without muting them.",
+      "directives": {
+        "low": "Understate. No superlatives, no exclamation marks; let facts carry the weight.",
+        "medium": "Moderate promotion: a few strong benefit words; keep superlatives occasional and tied to a concrete benefit.",
+        "high": "High-impact promotional register: confidently use powerful superlatives (\"best ever\", \"exceptional quality\", \"unmatched\", \"best-in-class\", \"game-changing\", \"revolutionary\", \"the ultimate\", \"nothing else comes close\") as brand energy. Do not soften, hedge or dilute them. Pair them with vivid, concrete benefits and sensory language so the hype feels exciting, not generic."
+      }
+    },
+    {
+      "id": "premium",
+      "label": "Premium",
+      "description": "How luxury and exclusive the positioning should feel.",
+      "min": 0,
+      "max": 100,
+      "default": 80,
+      "low_label": "Accessible",
+      "high_label": "Luxury / premium",
+      "effect_on_copy": "Higher values favour refined, craft-focused, exclusive language; lower values favour approachable, value-focused language.",
+      "directives": {
+        "low": "Accessible and value-focused; everyday words; emphasise ease and affordability only if the brief supports it.",
+        "medium": "Quality-aware but approachable; mention craft or materials where the brief provides them.",
+        "high": "Refined and exclusive: craft, materials, provenance, restraint. Fewer words, more weight. No discount or price-pressure language unless the brief asks for it."
+      }
+    },
+    {
+      "id": "energy",
+      "label": "Energy",
+      "description": "How lively and kinetic the delivery should feel.",
+      "min": 0,
+      "max": 100,
+      "default": 60,
+      "low_label": "Calm",
+      "high_label": "High-energy",
+      "effect_on_copy": "Higher values use active verbs and momentum; lower values use steady, composed pacing.",
+      "directives": {
+        "low": "Calm, steady pacing; composed sentences; no exclamation marks.",
+        "medium": "Warm, engaged pacing with occasional emphasis.",
+        "high": "Kinetic: strong active verbs, momentum, forward motion; at most one exclamation mark, and only if the channel suits it."
+      }
+    },
+    {
+      "id": "formality",
+      "label": "Formality",
+      "description": "How formal the register should be.",
+      "min": 0,
+      "max": 100,
+      "default": 40,
+      "low_label": "Conversational",
+      "high_label": "Formal",
+      "effect_on_copy": "Higher values use full sentences and professional diction; lower values use contractions and everyday speech.",
+      "directives": {
+        "low": "Conversational: contractions, second person, everyday words, fragments where natural.",
+        "medium": "Professional but friendly: contractions allowed, no slang.",
+        "high": "Formal: no contractions, no slang, complete sentences, precise diction."
+      }
+    },
+    {
+      "id": "warmth",
+      "label": "Warmth",
+      "description": "How empathetic and personable versus matter-of-fact.",
+      "min": 0,
+      "max": 100,
+      "default": 50,
+      "low_label": "Direct",
+      "high_label": "Warm / empathetic",
+      "effect_on_copy": "Higher values acknowledge the reader's situation and feelings; lower values stay brisk and factual.",
+      "directives": {
+        "low": "Direct and matter-of-fact; skip reassurance; get to the point.",
+        "medium": "Courteous and human; acknowledge the reader's need briefly.",
+        "high": "Acknowledge the reader's situation and feelings in their own language; write as someone who cares about the outcome."
+      }
+    },
+    {
+      "id": "humor",
+      "label": "Humor",
+      "description": "How playful the copy may be.",
+      "min": 0,
+      "max": 100,
+      "default": 15,
+      "low_label": "Serious",
+      "high_label": "Playful",
+      "effect_on_copy": "Higher values permit wit and wordplay that never costs clarity; lower values stay earnest.",
+      "directives": {
+        "low": "Serious and earnest; no jokes or wordplay.",
+        "medium": "A light touch: at most one dry or witty line, only if it fits the brand.",
+        "high": "Playful: wordplay, wit, a recurring light motif; clarity of the offer always wins over a joke."
+      }
+    },
+    {
+      "id": "simplicity",
+      "label": "Simplicity",
+      "description": "How plain and accessible versus dense and expert.",
+      "min": 0,
+      "max": 100,
+      "default": 65,
+      "low_label": "Expert / dense",
+      "high_label": "Simple / plain",
+      "effect_on_copy": "Higher values use short words and plain explanations; lower values use domain terminology and technical depth.",
+      "directives": {
+        "low": "Expert register: use the domain terms the audience already knows; denser sentences are acceptable.",
+        "medium": "Plain language; explain domain terms on first use.",
+        "high": "Plain words, short sentences, one idea per sentence; explain or avoid jargon."
+      }
+    },
+    {
+      "id": "urgency",
+      "label": "Urgency",
+      "description": "How strongly the copy pushes the reader to act now.",
+      "min": 0,
+      "max": 100,
+      "default": 40,
+      "low_label": "Relaxed",
+      "high_label": "Urgent",
+      "effect_on_copy": "Higher values emphasise timing and the cost of waiting. Deadlines and scarcity must come from the brief.",
+      "directives": {
+        "low": "Relaxed: no time pressure; let the reader decide at their own pace.",
+        "medium": "Gentle nudge: one clear next step, no deadline language.",
+        "high": "Time-pressured: stress the cost of waiting and the next step now. Use deadlines, scarcity or stock levels only if the brief states them; never invent them."
+      }
+    },
+    {
+      "id": "authority",
+      "label": "Authority",
+      "description": "How expert and commanding versus peer-like.",
+      "min": 0,
+      "max": 100,
+      "default": 60,
+      "low_label": "Peer-like",
+      "high_label": "Authoritative",
+      "effect_on_copy": "Higher values speak as the expert who has the evidence; lower values speak as an equal sharing a find.",
+      "directives": {
+        "low": "Peer-like: \"we\", shared discovery, no lecturing.",
+        "medium": "Knowledgeable guide; mention credentials briefly if supplied.",
+        "high": "Authoritative: speak as the expert; lead with credentials, track record and numbers supplied in the brief."
+      }
+    },
+    {
+      "id": "emotion",
+      "label": "Emotion",
+      "description": "How much the copy appeals to feeling versus logic.",
+      "min": 0,
+      "max": 100,
+      "default": 50,
+      "low_label": "Rational",
+      "high_label": "Emotional",
+      "effect_on_copy": "Higher values lead with feeling, stakes and imagery; lower values lead with reasoning and evidence.",
+      "directives": {
+        "low": "Rational: lead with facts, comparisons and outcomes; minimal emotive language.",
+        "medium": "Balanced: one emotional hook supported by facts.",
+        "high": "Emotional: lead with the feeling or the stake, use concrete sensory images, then support with a fact."
+      }
+    },
+    {
+      "id": "specificity",
+      "label": "Specificity",
+      "description": "How concrete and detailed the copy should be.",
+      "min": 0,
+      "max": 100,
+      "default": 75,
+      "low_label": "Broad",
+      "high_label": "Highly specific",
+      "effect_on_copy": "Higher values use named features, numbers and concrete scenes from the brief; lower values stay at the benefit level.",
+      "directives": {
+        "low": "Broad: stay at benefit level; few numbers.",
+        "medium": "Mix benefits with some concrete detail from the brief.",
+        "high": "Highly specific: named features, exact numbers, concrete scenes and objects, all drawn from the brief. If detail is missing, list it under Gaps instead of inventing it."
+      }
+    },
+    {
+      "id": "punchiness",
+      "label": "Punchiness",
+      "description": "How short and sharp the sentences are.",
+      "min": 0,
+      "max": 100,
+      "default": 80,
+      "low_label": "Flowing",
+      "high_label": "Short and punchy",
+      "effect_on_copy": "Higher values use short sentences and fragments; lower values use longer, flowing sentences.",
+      "directives": {
+        "low": "Flowing: longer sentences with connected reasoning.",
+        "medium": "Varied rhythm: mix short and mid-length sentences.",
+        "high": "Short and punchy: mostly under 12 words; ration fragments (about one per section) so they still land."
+      }
+    },
+    {
+      "id": "humanization",
+      "label": "Humanization",
+      "description": "How natural and human versus polished and corporate.",
+      "min": 0,
+      "max": 100,
+      "default": 70,
+      "low_label": "Polished / corporate",
+      "high_label": "Natural / human",
+      "effect_on_copy": "Higher values sound like a specific person writing to a specific reader; lower values accept a polished brand-guideline register.",
+      "directives": {
+        "low": "Polished brand register: clean and controlled, but still specific and free of AI filler.",
+        "medium": "Natural with polish; vary rhythm, use the audience's vocabulary.",
+        "high": "Sounds like one specific person writing to one specific reader: audience vocabulary, uneven rhythm, concrete nouns, a point of view. No stock phrases."
+      }
+    }
+  ],
+
+  "conflict_rules": [
+    {
+      "id": "formal-humor",
+      "when": { "formality": "high", "humor": "high" },
+      "directive": "Use intelligent, restrained wit rather than jokes: dry understatement and precise wordplay, no puns, emoji or slapstick.",
+      "avoid": ["Puns and slapstick humor"]
+    },
+    {
+      "id": "hype-no-specificity",
+      "when": { "hype": "high", "specificity": "low" },
+      "modes": ["free_hype", "hype_with_anchors"],
+      "directive": "Hype is high but specificity is low: still use bold, high-impact promotional language. Make it vivid and emotionally compelling. Use concrete product benefits where the brief has them, but do not weaken superlatives merely because proof is missing."
+    },
+    {
+      "id": "hype-no-specificity-strict",
+      "when": { "hype": "high", "specificity": "low" },
+      "modes": ["strict_claims"],
+      "directive": "Hype is high but claims are strict: keep the energy in rhythm and vivid benefits, avoid unsupported superlatives, and list under Gaps the proof that would unlock each strong claim.",
+      "warning": "Strict claims with high hype and low specificity: add proof points to the brief to unlock stronger language."
+    },
+    {
+      "id": "premium-punchy",
+      "when": { "premium": "high", "punchiness": "high" },
+      "directive": "Keep copy concise, elegant and confident: fewer words, no exclamation marks, no stacked fragments.",
+      "avoid": ["Exclamation marks", "Stacked fragments"]
+    },
+    {
+      "id": "human-hype",
+      "when": { "humanization": "high", "hype": "high" },
+      "directive": "Be energetic but credible: one specific person who is genuinely excited, with concrete detail. Not generic AI hype."
+    },
+    {
+      "id": "urgency-no-proof",
+      "when": { "urgency": "high" },
+      "directive": "Use only deadlines, scarcity or stock facts that appear in the brief; never invent a countdown.",
+      "avoid": ["Invented deadlines or scarcity"]
+    },
+    {
+      "id": "casual-authority",
+      "when": { "authority": "high", "formality": "low" },
+      "directive": "Sound like a seasoned colleague: confident expert, plain words, no lecturing and no brochure voice."
+    },
+    {
+      "id": "calm-energy-urgent",
+      "when": { "energy": "low", "urgency": "high" },
+      "directive": "Create urgency through clear stakes and a calm, firm tone, not through exclamation or volume."
+    },
+    {
+      "id": "understated-bold",
+      "when": { "hype": "low", "confidence": "high" },
+      "directive": "Project quiet certainty: short declarative facts, no superlatives."
+    },
+    {
+      "id": "emotion-simple",
+      "when": { "emotion": "high", "simplicity": "high" },
+      "directive": "Carry emotion through plain words and one concrete image; avoid abstract sentiment."
+    }
+  ],
+
+  "conditional_avoid": [
+    { "slider": "hype", "level": "low", "items": ["Superlatives", "Exclamation marks"] },
+    { "slider": "formality", "level": "high", "items": ["Contractions", "Slang"] },
+    { "slider": "humor", "level": "low", "items": ["Jokes and wordplay"] },
+    { "slider": "punchiness", "level": "high", "items": ["Sentences over about 18 words"] },
+    { "slider": "punchiness", "level": "low", "items": ["Long runs of fragments"] },
+    { "slider": "humanization", "level": "high", "items": ["Stock transitions", "Polished brand-speak"] },
+    { "slider": "simplicity", "level": "high", "items": ["Unexplained jargon"] },
+    { "slider": "premium", "level": "high", "items": ["Discount language", "Hard-sell pressure"] },
+    { "slider": "urgency", "level": "low", "items": ["Countdown and scarcity language"] }
+  ],
+
+  "always_avoid": [
+    "Fabricated statistics, certifications, awards, testimonials, reviews, guarantees, prices or deadlines",
+    "[NEED: ...] markers or placeholders inside the copy (list gaps separately)",
+    "Generic corporate filler (seamless, robust, leverage, unlock the power of)",
+    "Contrast reveals (\"not X, it's Y\")",
+    "Negation lists (\"No X, no Y, no Z\")",
+    "Trailing pile-on clauses",
+    "Self-answered questions (\"The result? ...\")",
+    "Vague authority (\"experts say\", \"studies show\")",
+    "Repetitive sentence structures"
+  ],
+
+  "never_invent": "Never invent verifiable facts: statistics, certifications, awards, testimonials, reviews, guarantees, prices, deadlines or stock levels. When a fact would help, write the copy without it and list it under Gaps.",
+
+  "common_directives": [
+    "Keep sentences varied; avoid generic AI filler.",
+    "Preserve the brand voice, house rules and example copy over default phrasing."
+  ],
+
+  "claim_intensities": [
+    {
+      "id": "free_hype",
+      "label": "Free hype",
+      "description": "Use \"best ever\", \"exceptional quality\", \"unmatched\", \"game-changing\" freely. No proof needed for promotional claims. Invented facts are never allowed.",
+      "summary": "Superlatives are used freely; statistics, awards, testimonials and guarantees are never invented.",
+      "directives": [
+        "Claim mode free_hype: strong promotional language is encouraged. Use powerful superlatives (\"best ever\", \"exceptional quality\", \"unmatched\", \"best-in-class\", \"game-changing\", \"revolutionary\", \"the ultimate\", \"nothing else comes close\") as brand energy, at the intensity the Hype slider sets.",
+        "Do not soften, hedge or dilute those phrases, and do not require proof for emotional or promotional claims.",
+        "Pair strong claims with vivid, concrete benefits, features, outcomes or differentiators when the brief has them, so the hype feels exciting rather than generic."
+      ],
+      "avoid": ["Softening or hedging superlatives"]
+    },
+    {
+      "id": "hype_with_anchors",
+      "label": "Hype + proof anchors",
+      "description": "Strong superlatives, each paired with a feature, benefit, result, guarantee or differentiator from your brief.",
+      "summary": "Major superlatives are paired with anchors from your brief.",
+      "directives": [
+        "Claim mode hype_with_anchors: use bold promotional language, and pair each major superlative with a real feature, benefit, outcome, guarantee, comparison or differentiator from the brief.",
+        "If no anchor is supplied, keep the emotional hype but do not present it as a factual measurement."
+      ],
+      "avoid": ["Superlatives presented as measured fact without an anchor"]
+    },
+    {
+      "id": "strict_claims",
+      "label": "Strict claims",
+      "description": "No unsupported superlatives. Specific, verifiable, evidence-led copy.",
+      "summary": "Unsupported superlatives are avoided; the copy stays specific and evidence-led.",
+      "directives": [
+        "Claim mode strict_claims: avoid unsupported superlatives; use specific, concrete, evidence-led language.",
+        "Flag every claim that would need substantiation, naming the evidence that would unlock it."
+      ],
+      "avoid": ["Unsupported superlatives"]
+    }
+  ],
+
+  "claim_types": [
+    {
+      "id": "emotional",
+      "label": "Emotional / brand hype",
+      "risk": "low",
+      "example": "\"The best morning ritual you'll ever have\"",
+      "on": "Emotional and brand-hype claims are welcome: feelings, experience, desire, superlatives about the experience.",
+      "off": "No emotional superlatives about the experience; describe it plainly."
+    },
+    {
+      "id": "comparative",
+      "label": "Comparative",
+      "risk": "medium",
+      "example": "\"Nothing else comes close\", \"better than supermarket brands\"",
+      "on": "Comparative claims allowed. Unnamed, obviously exaggerated comparisons are fine; a comparison that names or clearly identifies a competitor or category must rest on a fact from the brief.",
+      "off": "No comparisons with competitors or alternatives, named or unnamed."
+    },
+    {
+      "id": "performance",
+      "label": "Performance",
+      "risk": "high",
+      "example": "\"Lasts 12 hours\", \"the fastest-absorbing\", \"No. 1 in France\"",
+      "on": "Performance claims allowed, but measurable ones (numbers, durations, rankings, \"fastest\", \"clinically proven\", \"dermatologically tested\") only when the brief states them.",
+      "off": "No measurable performance claims (speed, duration, ranking, test results); stay with experience and benefit."
+    },
+    {
+      "id": "guarantee",
+      "label": "Guarantee",
+      "risk": "high",
+      "example": "\"Satisfied or refunded within 30 days\"",
+      "on": "Mention guarantees only exactly as the brief states them, with their conditions.",
+      "off": "No guarantees or promises of results."
+    }
+  ],
+
+  "claim_checks": [
+    { "id": "off", "label": "Off", "directive": "" },
+    {
+      "id": "risky",
+      "label": "Risky claims only",
+      "directive": "After the copy, add a Claim check listing only medium- and high-risk claims: the claim, its type, the risk level, why (the rule in plain words), safer wording, and the proof that would make it safe. It is a recommendation: do not change or block the copy because of it."
+    },
+    {
+      "id": "full",
+      "label": "Every major claim",
+      "directive": "After the copy, add a Claim check covering every major claim: its type, its anchor in the brief (or none), the risk level with the reason, and safer wording where the risk is medium or high. It is a recommendation: do not change or block the copy because of it."
+    }
+  ],
+
+  "sectors": [
+    { "id": "auto", "label": "Auto-detect from the brief" },
+    { "id": "general", "label": "General consumer goods" },
+    { "id": "food_supplements", "label": "Food & food supplements" },
+    { "id": "cosmetics", "label": "Cosmetics & personal care" },
+    { "id": "wellness_services", "label": "Wellness services & therapies" },
+    { "id": "eco", "label": "Environmental / natural / organic claims" },
+    { "id": "b2b", "label": "B2B, software & services" }
+  ],
+
+  "channels": [
+    {
+      "id": "any",
+      "label": "From the brief",
+      "structure": "",
+      "cta": "",
+      "max_words": 250,
+      "sections": { "headline": 1, "body": 0, "cta": "action" }
+    },
+    {
+      "id": "landing_page",
+      "label": "Landing page",
+      "structure": "Hero headline, subheadline, 3 to 5 benefit sections with short heads, a proof or objection block, closing CTA.",
+      "cta": "One primary CTA, repeated at the hero and the close.",
+      "max_words": 450,
+      "sections": { "headline": 1, "body": 0, "cta": "action" }
+    },
+    {
+      "id": "product_page",
+      "label": "Product page",
+      "structure": "Product title line, one-sentence hook, 3 to 5 benefit bullets (benefit first, feature second), short description with sensory or usage detail, CTA.",
+      "cta": "Add-to-cart style action plus what they get.",
+      "max_words": 200,
+      "sections": { "headline": 1, "body": 0, "cta": "action" }
+    },
+    {
+      "id": "meta_ad",
+      "label": "Meta ad (Facebook / Instagram)",
+      "structure": "Primary text with the hook inside the first 125 characters, a headline under 40 characters, a short description line.",
+      "cta": "Match a Meta CTA button (Shop now, Learn more, Sign up).",
+      "max_words": 90,
+      "sections": { "headline": 1, "body": 0, "cta": "action" }
+    },
+    {
+      "id": "google_ad",
+      "label": "Google search ad",
+      "structure": "Responsive search ad: up to 15 headlines of 30 characters max and 4 descriptions of 90 characters max. Count characters. Use the main keyword where natural.",
+      "cta": "Verb-led, inside a headline or description.",
+      "max_words": 120,
+      "sections": { "headline": 0, "body": 0, "cta": "action" }
+    },
+    {
+      "id": "email",
+      "label": "Email",
+      "structure": "3 subject lines under 50 characters, preview text under 90 characters, a body with one idea, one CTA, an optional short P.S.",
+      "cta": "One button-style CTA.",
+      "max_words": 200,
+      "sections": { "headline": 1, "body": 0, "cta": "action" }
+    },
+    {
+      "id": "short_video",
+      "label": "TikTok / Reels caption",
+      "structure": "Hook in the first line (under 80 characters), 1 to 3 short lines, 3 to 5 relevant hashtags. Native register, low polish.",
+      "cta": "Native, casual CTA (comment, follow, link in bio).",
+      "max_words": 50,
+      "sections": { "headline": 1, "body": 0, "cta": "soft" }
+    },
+    {
+      "id": "social_post",
+      "label": "Social post (organic)",
+      "structure": "Hook line, short body, one CTA.",
+      "cta": "One low-friction action.",
+      "max_words": 100,
+      "sections": { "headline": 1, "body": 0, "cta": "soft" }
+    }
+  ],
+
+  "audiences": [
+    {
+      "id": "general",
+      "label": "General consumer",
+      "directive": "General consumers: plain benefits, everyday words; tie each superlative to a concrete sensory or practical benefit."
+    },
+    {
+      "id": "expert",
+      "label": "Expert / enthusiast",
+      "directive": "Expert readers: use their terms and lead with specifics (ingredients, specs, method). A superlative only lands when followed by the detail that earns it; empty hype reads as amateur."
+    },
+    {
+      "id": "b2b",
+      "label": "B2B buyer",
+      "directive": "B2B buyers: outcomes, risk reduction, time and cost saved (figures only from the brief), proof and process. At most one superlative per section, attached to a business outcome."
+    },
+    {
+      "id": "luxury",
+      "label": "Luxury customer",
+      "directive": "Luxury readers: express superiority through material, craft, provenance, rarity and restraint, not loud words. One quiet superlative (\"the finest\") beats stacked hype. No \"best ever!\", discounts or countdowns."
+    },
+    {
+      "id": "social_native",
+      "label": "Social-native (Gen Z / millennial)",
+      "directive": "Social-native readers: internet-native register, self-aware hype, short lines. Avoid corporate phrasing and dated slang."
+    }
+  ],
+
+  "section_offsets": [
+    { "value": -1, "label": "Quieter" },
+    { "value": 0, "label": "Same" },
+    { "value": 1, "label": "Louder" }
+  ],
+
+  "cta_styles": [
+    { "id": "action", "label": "Action + benefit", "directive": "CTAs: action verb + what they get (\"Get my starter kit\"), 2 to 5 words, no hype words." },
+    { "id": "soft", "label": "Soft invitation", "directive": "CTAs: low-pressure invitation (\"See how it works\", \"Discover the range\")." },
+    { "id": "urgent", "label": "Urgent", "directive": "CTAs: now-oriented (\"Order today\"); time limits only if the brief states them." }
+  ],
+
+  "output_modes": [
+    { "id": "single", "label": "Primary + alternatives", "directive": "" },
+    {
+      "id": "comparison",
+      "label": "Bold / Premium / Proof-led set",
+      "directive": "Write three complete versions from the same brief and label them: Bold (maximum hype within these settings), Premium (restrained, craft- and material-led), Proof-led (each claim carried by a brief fact). End with one line on which suits which use."
+    }
+  ],
+
+  "languages": [
+    { "id": "fr", "label": "Français", "note": "French typography: « » quotes with non-breaking spaces inside, a non-breaking space before ; : ! ?, sentence case in headings. Native French promotional register, not translated English." },
+    { "id": "en", "label": "English", "note": "Match the market's spelling and idiom (US or UK)." },
+    { "id": "he", "label": "עברית", "note": "Native Hebrew promotional register; keep brand and product names as the brand writes them." }
+  ],
+
+  "addresses": [
+    { "id": "auto", "label": "Auto" },
+    { "id": "vous", "label": "Vous" },
+    { "id": "tu", "label": "Tu" }
+  ],
+
+  "defaults": {
+    "claim_intensity": "free_hype",
+    "claim_types": ["emotional", "comparative", "performance", "guarantee"],
+    "claim_check": "risky",
+    "sector": "auto",
+    "channel": "any",
+    "audience": "general",
+    "language": "fr",
+    "market": "FR",
+    "address": "auto",
+    "output": "single",
+    "alternatives": 2,
+    "approved_words": ["exceptional", "best ever", "unmatched", "obsessed", "elite"],
+    "banned_words": ["seamless", "leverage", "unlock", "elevate", "robust", "delve"]
+  },
+
+  "presets": [
+    {
+      "id": "default",
+      "label": "Default (bold premium)",
+      "description": "Your everyday setup: strong, premium, sales-driven, no invented facts.",
+      "sliders": { "confidence": 90, "hype": 90, "premium": 80, "energy": 60, "formality": 40, "warmth": 50, "humor": 15, "simplicity": 65, "urgency": 40, "authority": 60, "emotion": 50, "specificity": 75, "punchiness": 80, "humanization": 70 },
+      "claim_intensity": "free_hype",
+      "audience": "general"
+    },
+    {
+      "id": "premium-bold",
+      "label": "Premium bold",
+      "description": "Maximum confidence and hype with a premium finish.",
+      "sliders": { "confidence": 95, "hype": 95, "premium": 85, "energy": 85, "formality": 55, "warmth": 35, "humor": 10, "simplicity": 55, "urgency": 60, "authority": 85, "emotion": 60, "specificity": 80, "punchiness": 88, "humanization": 60 },
+      "claim_intensity": "free_hype",
+      "audience": "general"
+    },
+    {
+      "id": "luxury-minimal",
+      "label": "Luxury minimal",
+      "description": "Quiet superiority: craft, material, restraint.",
+      "sliders": { "confidence": 85, "hype": 45, "premium": 98, "energy": 25, "formality": 70, "warmth": 40, "humor": 5, "simplicity": 60, "urgency": 10, "authority": 75, "emotion": 55, "specificity": 85, "punchiness": 85, "humanization": 55 },
+      "claim_intensity": "free_hype",
+      "audience": "luxury"
+    },
+    {
+      "id": "genz-punchy",
+      "label": "Gen-Z punchy",
+      "description": "Loud, fast, playful, internet-native.",
+      "sliders": { "confidence": 90, "hype": 85, "premium": 30, "energy": 92, "formality": 5, "warmth": 60, "humor": 70, "simplicity": 85, "urgency": 60, "authority": 30, "emotion": 70, "specificity": 65, "punchiness": 95, "humanization": 90 },
+      "claim_intensity": "free_hype",
+      "audience": "social_native"
+    },
+    {
+      "id": "expert-authority",
+      "label": "Expert authority",
+      "description": "Specific, dense, proof-led expertise.",
+      "sliders": { "confidence": 85, "hype": 40, "premium": 60, "energy": 45, "formality": 65, "warmth": 35, "humor": 10, "simplicity": 25, "urgency": 25, "authority": 95, "emotion": 25, "specificity": 95, "punchiness": 55, "humanization": 60 },
+      "claim_intensity": "hype_with_anchors",
+      "audience": "expert"
+    },
+    {
+      "id": "friendly-direct",
+      "label": "Friendly direct",
+      "description": "Warm, plain, conversational, gets to the point.",
+      "sliders": { "confidence": 75, "hype": 50, "premium": 40, "energy": 60, "formality": 20, "warmth": 85, "humor": 35, "simplicity": 85, "urgency": 35, "authority": 45, "emotion": 55, "specificity": 75, "punchiness": 70, "humanization": 90 },
+      "claim_intensity": "free_hype",
+      "audience": "general"
+    },
+    {
+      "id": "natural-human",
+      "label": "Natural & human",
+      "description": "Understated, specific, conversational. No superlatives.",
+      "sliders": { "confidence": 50, "hype": 12, "premium": 30, "energy": 35, "formality": 12, "warmth": 80, "humor": 30, "simplicity": 88, "urgency": 15, "authority": 30, "emotion": 60, "specificity": 80, "punchiness": 40, "humanization": 95 },
+      "claim_intensity": "free_hype",
+      "audience": "general"
+    }
+  ]
+}
