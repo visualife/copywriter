@@ -526,6 +526,7 @@
   ],
 
   "output_modes": [
+    { "id": "primary", "label": "Primary (default)", "directive": "Return the primary copy only, no alternatives." },
     { "id": "single", "label": "Primary + alternatives", "directive": "" },
     {
       "id": "comparison",
@@ -556,8 +557,8 @@
     "language": "fr",
     "market": "FR",
     "address": "auto",
-    "output": "single",
-    "alternatives": 2,
+    "output": "primary",
+    "alternatives": 1,
     "approved_words": ["exceptional", "best ever", "unmatched", "obsessed", "elite"],
     "banned_words": ["seamless", "leverage", "unlock", "elevate", "robust", "delve"]
   },

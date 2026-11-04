@@ -145,7 +145,7 @@ End with one line: "Recommendation only, copy unchanged. Not legal advice; for r
 In this order, headings in the user's language. Lead with the copy; no preamble, no recap, no closing offer.
 
 1. **Copy:** paste-ready, clean. In `comparison` mode, the three labelled versions.
-2. **Alternatives:** the requested number, each a different angle, not a reword.
+2. **Alternatives:** the requested number, each a different angle, not a reword. Honour `alt_max_words` (per-alternative lengths) when present; `output: primary` means none.
 3. **Headlines and CTAs:** 3 to 5 each, when the channel uses them.
 4. **Gaps:** facts that would make the copy stronger, and where each would go. Omit if none.
 5. **Claim check:** per section 7.

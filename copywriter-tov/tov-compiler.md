@@ -36,7 +36,7 @@ A rule fires when every slider in `when` is at the given level and, if `modes` i
 7. Sector line, only when the claim check is on.
 8. Language note, market adaptation, and French `tu`/`vous` when set.
 9. Approved words (minus any that are also banned), banned words, the voice-examples line when examples exist.
-10. Length (`max_words` or the channel default, clamped 20–1000), then the output mode (alternatives or the comparison set), then the claim check directive.
+10. Length (`max_words` or the channel default, clamped 20–1000), then the output mode (`primary`: primary copy only; `single`: primary plus 1 to 3 alternatives, each with an optional own length given as `alt_max_words`, default 1 alternative; or the `comparison` set), then the claim check directive.
 
 ## 4. Avoid list
 
@@ -50,7 +50,7 @@ preset: Default (bold premium)                      (only when the settings matc
 language: fr (FR) · address: auto
 channel: any · audience: general · sector: auto
 claim_mode: free_hype · claim_types_allowed: emotional, comparative, performance, guarantee · claim_check: risky
-output: single · alternatives: 2 · max_words: 250
+output: primary · alternatives: 0 · max_words: 250
 sections: headline=louder · body=same · cta=action
 sliders: confidence=90 hype=90 premium=80 energy=60 formality=40 warmth=50 humor=15 simplicity=65 urgency=40 authority=60 emotion=50 specificity=75 punchiness=80 humanization=70
 approved_words: exceptional, best ever, unmatched, obsessed, elite
